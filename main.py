@@ -12,9 +12,19 @@ def main() -> None:
     size = source.stat().st_size
     if size > 1048576:
         raise SystemExit(f"source image is {size} bytes, over the 1048576 limit")
+    if size < 3:
+        raise SystemExit(f"source image is only {size} bytes")
+    with source.open("rb") as handle:
+        magic = handle.read(3)
+    if magic != b"\xff\xd8\xff":
+        raise SystemExit("source image is not a JPEG")
     dest_dir = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
     dest_dir.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(source, dest_dir / "entry.png")
+    dest = dest_dir / "entry.png"
+    shutil.copyfile(source, dest)
+    copied = dest.stat().st_size
+    if copied != size:
+        raise SystemExit(f"copy is {copied} bytes, source is {size}")
 
 
 if __name__ == "__main__":
