@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/news-image-20261120/AARenor/news_image_20261120/rank.svg)](https://make.fun/bounty/news-image-20261120/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261120)
 [![reward](https://make.fun/badge/news-image-20261120/AARenor/news_image_20261120/reward.svg)](https://make.fun/bounty/news-image-20261120?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261120)
 
-A one-page front page for Friday 20 November 2026: 51 sourced stories across 7 regions, with three illustrated leads, twelve cards, a UTC timeline and a date check. The page was drawn from that day's Wikipedia current events and Friday wire reports, then screenshotted to a single image.
+A one-page front page for Friday 20 November 2026: 51 sourced stories across 7 regions and 19 fields, with a full-width date masthead, five big numbers, three illustrated leads, twelve cards, a UTC strip, a region tally and a date check. Facts come from that day's Wikipedia current events and Friday wire reports; the page was laid out in HTML and screenshotted to one 1024-pixel image.
 
 ## Run it
 
